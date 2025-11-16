@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Assistente de emails UI (Frontend) - Desafio AutoU
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta é a interface de usuário (UI) para o desafio técnico da AutoU. A aplicação foi construída para ser uma ferramenta de triagem de e-mail limpa, profissional e 100% responsiva.
 
-## Available Scripts
+Esta aplicação cumpre todos os critérios de UI, incluindo o "Capricho visual ou recursos adicionais".
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Link da Aplicação Ao Vivo (Vercel)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**`https://autou-desafio-frontend.vercel.app/`**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **⚠️ Aviso Importante (Cold Start)**
+> O backend (API) está hospedado no plano gratuito do Render.com. A **primeira** análise do dia pode levar de 30 a 60 segundos para "acordar" o servidor. As análises seguintes serão rápidas.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📸 Screenshots
 
-### `npm run build`
+Aqui está uma prévia da aplicação em "Dark Mode". O design é 100% responsivo, adaptando-se do desktop ao mobile.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Assistente no Desktop](./public/screen-empty.png) | ![Assistente no Desktop](./public/screen-arquivo-texto.png) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Stack de Tecnologia
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **React:** Para toda a interface e gerenciamento de estado.
+* **Material-UI (MUI):** Para o "Dark Mode", sistema de Grid responsivo e todos os componentes de UI (Cards, Botões, Alertas, etc.).
+* **Vercel:** Plataforma de deploy (hospedagem).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Como Executar Localmente
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Siga estas instruções para rodar o projeto em sua máquina local.
 
-## Learn More
+### 1. Clonar o Repositório
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+git clone [https://github.com/rafaeltenorioo/autou-desafio-frontend.git] cd autou-desafio-frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Instalar Dependências
 
-### Code Splitting
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Conectar ao Backend
+Este projeto precisa que o [servidor da API (backend)]([https://github.com/rafaeltenorioo/autou-desafio-backend]) esteja rodando.
 
-### Analyzing the Bundle Size
+* No arquivo `src/App.js` (ou onde sua função `handleSubmit` estiver), certifique-se de que o `fetch` aponta para o endereço do seu backend local:
+    ```javascript
+    const response = await fetch(
+      "[http://127.0.0.1:5000/process-email](http://127.0.0.1:5000/process-email)", 
+      { ... }
+    );
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4. Rodar a Aplicação
 
-### Making a Progressive Web App
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+O site estará disponível em `http://localhost:3000`.
